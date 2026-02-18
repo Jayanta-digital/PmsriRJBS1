@@ -26,7 +26,7 @@ const SCHOOL_CONFIG = {
 
   // ─── SCHOOL IDENTITY ────────────────────────────────────────
   name:          "PM Shri Radhakuchi J.B. School",
-  nameAssamese:  "৬৬ নং ৰাধাকুছি জুনিয়ৰ বেছিক বিদ্যালয়",
+  nameAssamese:  "৬৬ নং বি ৰাধাকুছি নিম্ন বুনিয়াদী বিদ্যালয়",
   shortName:     "RJBS",
   code:          "18060605101",
   established:   1948,
@@ -71,14 +71,14 @@ const SCHOOL_CONFIG = {
   heroImages: {
     // ✅ Use "driveFiles" to paste individual Google Drive share links
     // No API key needed — just right-click → Share → Copy link
-    // Use "hosted" for local files | "fallback" forces Unsplash images
+    // Use "hosted" for hosted files/"driveFiles" for google drivefor local files | "fallback" forces Unsplash images
     source: "driveFiles",
 
     // ✅ PASTE YOUR HERO IMAGE DRIVE LINKS HERE:
     // Each image: right-click in Drive → Share → "Anyone with link" → Copy link
     driveFiles: [
       {
-        driveLink: "https://drive.google.com/file/d/PASTE_YOUR_SLIDE1_FILE_ID_HERE/view",
+        driveLink: "https://drive.google.com/file/d/1JIMdIJEBibhw4rRaJvcCPmxAM1bGsEHJ/view",
         caption: "Welcome to PM Shri Radhakuchi J.B. School"
       },
       {
