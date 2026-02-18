@@ -21,6 +21,29 @@
  *  4. The code automatically converts it to a working display URL
  * ============================================================
  */
+/**
+ * ============================================================
+ *  SCHOOL WEBSITE CONFIG — Edit ONLY this file
+ *  PM Shri Radhakuchi J.B. School
+ * ============================================================
+ *
+ *  ✅ FIXED ISSUES (v2):
+ *  1. Logo Drive link now uses lh3.googleusercontent.com thumbnail URL
+ *     (Google Drive uc?export=view is BLOCKED by browsers — this fixes it)
+ *  2. Hero source changed to "driveFiles" — paste individual share links,
+ *     no Google API key needed
+ *  3. Gallery same fix — individual Drive file links
+ *  4. Smart fallback: if Drive links are placeholders → auto-shows Unsplash images
+ *  5. Notices source corrected to "hosted"
+ *
+ *  HOW TO ADD YOUR DRIVE IMAGES (No API Key needed):
+ *  ─────────────────────────────────────────────────
+ *  1. Open Google Drive → right-click your image → Share
+ *  2. Set to "Anyone with the link can view"
+ *  3. Click "Copy link" — paste it in driveLink: "..." below
+ *  4. The code automatically converts it to a working display URL
+ * ============================================================
+ */
 
 const SCHOOL_CONFIG = {
 
@@ -46,7 +69,7 @@ const SCHOOL_CONFIG = {
     website:  "Coming soon...",
   },
 
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57312.8!2d91.520!3d26.351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375ab7d6c3e8c4d9%3A0x1234567890abcdef!2sRadhakuchi%2C%20Assam!5e0!3m2!1sen!2sin!4v1234567890",
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.4341516920206!2d91.51992632346046!3d26.35147917072626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sRadhakuchi%20LP%20School!2sRadhakuchi%2C%20Kamrup%20District%2C%20Assam!5e0!3m2!1sen!2sin!4v1707033600000",
 
   // ─── LOGO ───────────────────────────────────────────────────
   logo: {
@@ -177,20 +200,20 @@ const SCHOOL_CONFIG = {
 
   // ─── TEACHERS ────────────────────────────────────────────────
   teachers: [
-    { name: "Boloram Baruah",  designation: "Headmaster",       qualification: "HSLC", subject: "General Administration",  experience: "18 Years", photoSource: "avatar", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/1OGoltG1Lpo4tRDb56WGZZGzRMuv3CCOI/view" },
-    { name: "Champak Nath",     designation: "Asstt. Teacher",   qualification: "B.A.",             subject: "All", experience: "12 Years", photoSource: "avatar", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/1OGoltG1Lpo4tRDb56WGZZGzRMuv3CCOI/view" },
-    { name: "Charulata Deka",     designation: "Asstt. Teacher",          qualification: "HSLC",            subject: "All",    experience: "19 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/1OGoltG1Lpo4tRDb56WGZZGzRMuv3CCOI/view" },
-    { name: "Iramoni Deka",    designation: "Asstt. Teacher",          qualification: "B.A., B.Ed.",          subject: "All",           experience: "6 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
-    { name: "Bhanita Baruah",    designation: "Asstt. Teacher",          qualification: "M.A.",          subject: "All",            experience: "4 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
-    { name: "Doli Talukdar",    designation: "Asstt. Teacher",          qualification: "M.A., M.Ed.",          subject: "All",            experience: "4 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
+    { name: "Boloram Baruah",  designation: "Headmaster",       qualification: "HSLC", subject: "General Administration",  experience: "18 Years", photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Champak Nath",     designation: "Asstt. Teacher",   qualification: "B.A.",             subject: "All", experience: "12 Years", photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Charulata Deka",     designation: "Asstt. Teacher",          qualification: "HSLC",            subject: "All",    experience: "19 Years",  photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Iramoni Deka",    designation: "Asstt. Teacher",          qualification: "B.A., B.Ed.",          subject: "All",           experience: "6 Years",  photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Bhanita Baruah",    designation: "Asstt. Teacher",          qualification: "M.A.",          subject: "All",            experience: "4 Years",  photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Doli Talukdar",    designation: "Asstt. Teacher",          qualification: "M.A., M.Ed.",          subject: "All",            experience: "4 Years",  photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
   ],
 
   supportingStaff: [
-    { name: "Dipu Kumar Nath",    designation: "Chess Teacher(Temp.)", photoSource: "avatar" },
-    { name: "Kankan Deka",    designation: "Music Teacher(Temp.)", photoSource: "avatar" },
-    { name: "Bikash Brahma",    designation: "P.E & Sports Teacher(Temp.)", photoSource: "avatar" },
-    { name: "Doiboki Kalita", designation: "Cook",           photoSource: "avatar" },
-    { name: "Bobita Deka",  designation: "Cook",            photoSource: "avatar" },
+    { name: "Dipu Kumar Nath",    designation: "Chess Teacher(Temp.)", photoSource: "drive", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Kankan Deka",    designation: "Music Teacher(Temp.)", photoSource: "drive", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Bikash Brahma",    designation: "P.E & Sports Teacher(Temp.)", photoSource: "drive", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Doiboki Kalita", designation: "Cook",           photoSource: "drive", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Bobita Deka",  designation: "Cook",            photoSource: "drive", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
   ],
 
   // ─── STATS ───────────────────────────────────────────────────
@@ -348,4 +371,4 @@ function esc(str) {
 /** Check if notice is new (within 30 days) */
 function isNew(dateStr) {
   return (Date.now() - new Date(dateStr)) / 86400000 <= 30;
-}
+     }
