@@ -209,11 +209,11 @@ const SCHOOL_CONFIG = {
   ],
 
   supportingStaff: [
-    { name: "Dipu Kumar Nath",    designation: "Chess Teacher(Temp.)", photoSource: "drive", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
-    { name: "Kankan Deka",    designation: "Music Teacher(Temp.)", photoSource: "drive", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
-    { name: "Bikash Brahma",    designation: "P.E & Sports Teacher(Temp.)", photoSource: "drive", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
-    { name: "Doiboki Kalita", designation: "Cook",           photoSource: "drive", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
-    { name: "Bobita Deka",  designation: "Cook",            photoSource: "drive", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Dipu Kumar Nath",    designation: "Chess Teacher(Temp.)", photoSource: "Avatar", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Kankan Deka",    designation: "Music Teacher(Temp.)", photoSource: "Avatar", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Bikash Brahma",    designation: "P.E & Sports Teacher(Temp.)", photoSource: "Avatar", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Doiboki Kalita", designation: "Cook",           photoSource: "Avatar", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Bobita Deka",  designation: "Cook",            photoSource: "Avatar", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
   ],
 
   // ─── STATS ───────────────────────────────────────────────────
