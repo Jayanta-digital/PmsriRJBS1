@@ -72,10 +72,10 @@ const SCHOOL_CONFIG = {
 headmaster: {
   name:        "Mr. [Headmaster's Full Name]",       // ← fill in
   designation: "Headmaster",
-  qualification: "M.A., B.Ed.",                      // ← fill in
-  experience:  "25+ Years",                          // ← fill in
+  //qualification: "M.A., B.Ed.",                      // ← fill in
+  experience:  "18+ Years",                          // ← fill in
   photoSource: "drive",                              // "drive" or "hosted"
-  drivePhotoLink: "https://drive.google.com/file/d/PASTE_HEADMASTER_PHOTO_ID_HERE/view",
+  drivePhotoLink: "https://drive.google.com/file/d/1LY6HyfdZajx_HYGLTZs_IQQUAfUkPzLH/view",
   hostedPath:  "assets/images/headmaster.jpg",
   message: `Dear Students, Parents & Well-wishers,
 
