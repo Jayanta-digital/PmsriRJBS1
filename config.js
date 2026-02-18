@@ -92,17 +92,33 @@ With warm regards,`,
   },
 
   // ─── NOTICE BOARD ───────────────────────────────────────────
+  // ╔══════════════════════════════════════════════════════════╗
+  // ║  HOW TO PUBLISH A NEW NOTICE (takes < 1 minute):        ║
+  // ║  1. Upload your PDF to Google Drive                      ║
+  // ║  2. Right-click → Share → "Anyone with the link" → Copy ║
+  // ║  3. Add a new line at the TOP of driveFiles below:      ║
+  // ║     { title: "Notice Title",                            ║
+  // ║       driveLink: "paste-your-link-here",                ║
+  // ║       date: "YYYY-MM-DD" },                             ║
+  // ║  4. Save config.js — it goes live instantly! ✅          ║
+  // ║                                                          ║
+  // ║  🔴 NEW badge rules (automatic, no action needed):      ║
+  // ║     • Any notice within 30 days of its date gets badge  ║
+  // ║     • The 4 newest notices always get the red badge     ║
+  // ║     • After 30 days badge disappears on its own         ║
+  // ╚══════════════════════════════════════════════════════════╝
   notices: {
-    source: "hosted",
-    hostedFiles: [
-      { title: "Annual Examination Schedule 2024-25",  file: "assets/pdfs/notices/exam-schedule-2025.pdf",  date: "2025-02-10" },
-      { title: "Admission Notice – Session 2025-26",   file: "assets/pdfs/notices/admission-2025-26.pdf",   date: "2025-01-28" },
-      { title: "Mid-Day Meal Committee Meeting",       file: "assets/pdfs/notices/mdm-meeting-jan25.pdf",   date: "2025-01-15" },
-      { title: "Result – Class V Annual Exam 2024",    file: "assets/pdfs/notices/result-cv-2024.pdf",      date: "2024-12-20" },
-      { title: "School Development Committee (SDC)",   file: "assets/pdfs/notices/sdc-meeting-dec24.pdf",   date: "2024-12-05" },
+    source: "drive",
+    noticeFolderUrl: "https://drive.google.com/drive/folders/197N380ywXB3FLF7EaON9bHiZner7e6uW",
+    driveFiles: [
+      // ↓↓ ADD NEW NOTICES AT THE TOP ↓↓
+      { title: "Assam Govt Official Holidays for 2025-2026",  driveLink: "https://drive.google.com/drive/folders/197N380ywXB3FLF7EaON9bHiZner7e6uW", date: "2026-02-18" },
+      { title: "Annual Examination Schedule 2024-25",         driveLink: "https://drive.google.com/file/d/REPLACE_WITH_REAL_FILE_ID/view",            date: "2025-02-10" },
+      { title: "Admission Notice – Session 2025-26",          driveLink: "https://drive.google.com/file/d/REPLACE_WITH_REAL_FILE_ID/view",            date: "2025-01-28" },
+      { title: "Mid-Day Meal Committee Meeting",              driveLink: "https://drive.google.com/file/d/REPLACE_WITH_REAL_FILE_ID/view",            date: "2025-01-15" },
+      { title: "Result – Class V Annual Exam 2024",           driveLink: "https://drive.google.com/file/d/REPLACE_WITH_REAL_FILE_ID/view",            date: "2024-12-20" },
+      { title: "School Development Committee (SDC)",          driveLink: "https://drive.google.com/file/d/REPLACE_WITH_REAL_FILE_ID/view",            date: "2024-12-05" },
     ],
-    driveFolderLink: "https://drive.google.com/drive/folders/YOUR_REAL_NOTICES_FOLDER_ID",
-    driveApiKey: "",
   },
 
   // ─── GALLERY ────────────────────────────────────────────────
