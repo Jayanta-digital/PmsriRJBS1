@@ -340,20 +340,26 @@ function renderNotices(list) {
     const showBadge = isRecent(n.date) || n.isTop4;
     const badge     = showBadge ? `<span class="badge-new">New</span>` : "";
 
-    const viewBtn = n.isFolder
-      ? `<a href="${n.rawLink}" target="_blank" rel="noopener" class="n-btn n-btn--view" title="Open Folder">📂</a>`
-      : (n.viewUrl
-          ? `<button class="n-btn n-btn--view" onclick="openPdfModal('${esc(n.title)}','${n.viewUrl}','${n.downloadUrl || ''}')" title="Preview PDF">👁️</button>`
-          : `<button class="n-btn n-btn--view" disabled style="opacity:.35;cursor:not-allowed">👁️</button>`);
+    // Always build view button — folder opens in new tab, file opens in PDF modal
+    const viewBtn = n.viewUrl
+      ? (n.isFolder
+          ? `<a href="${n.rawLink}" target="_blank" rel="noopener" class="n-btn n-btn--view" title="View in Drive">👁️</a>`
+          : `<button class="n-btn n-btn--view" onclick="openPdfModal('${esc(n.title)}','${n.viewUrl}','${n.downloadUrl || ''}')" title="Preview PDF">👁️</button>`)
+      : `<button class="n-btn n-btn--view" disabled style="opacity:.35;cursor:not-allowed" title="Not available">👁️</button>`;
 
-    const dlBtn = (!n.isFolder && n.downloadUrl)
-      ? `<a href="${n.downloadUrl}" download class="n-btn n-btn--dl" title="Download">⬇️</a>`
-      : "";
+    // Always build download button — folder links to Drive folder, file downloads directly
+    const dlBtn = n.isFolder
+      ? `<a href="${n.rawLink}" target="_blank" rel="noopener" class="n-btn n-btn--dl" title="Open in Drive">📂</a>`
+      : (n.downloadUrl
+          ? `<a href="${n.downloadUrl}" download class="n-btn n-btn--dl" title="Download PDF">⬇️</a>`
+          : `<button class="n-btn n-btn--dl" disabled style="opacity:.35;cursor:not-allowed" title="Not available">⬇️</button>`);
+
+    const rowClick = n.isFolder
+      ? `window.open('${n.rawLink}','_blank')`
+      : (n.viewUrl ? `openPdfModal('${esc(n.title)}','${n.viewUrl}','${n.downloadUrl || ''}')` : '');
 
     return `
-      <div class="notice-item" onclick="${n.isFolder
-        ? `window.open('${n.rawLink}','_blank')`
-        : (n.viewUrl ? `openPdfModal('${esc(n.title)}','${n.viewUrl}','${n.downloadUrl || ''}')` : '')}">
+      <div class="notice-item" onclick="${rowClick}" style="${rowClick ? 'cursor:pointer' : ''}">
         <div class="notice-item__icon">📄</div>
         <div class="notice-item__body">
           <div class="notice-item__title">
