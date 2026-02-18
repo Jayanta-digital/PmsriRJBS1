@@ -112,7 +112,7 @@ With warm regards,`,
     noticeFolderUrl: "https://drive.google.com/drive/folders/197N380ywXB3FLF7EaON9bHiZner7e6uW",
     driveFiles: [
       // ↓↓ ADD NEW NOTICES AT THE TOP ↓↓
-      { title: "Assam Govt Official Holidays for 2025-2026",  driveLink: "https://drive.google.com/file/d/1FwcLMnYwFy2O2Vlp4Yi8CBu4tG1u4AYn/view", date: "2026-02-18" },
+      { title: "Assam Govt Official Holidays for 2025-2026",  driveLink: "https://drive.google.com/file/d/1FwcLMnYwFy2O2Vlp4Yi8CBu4tG1u4AYn/view?usp=drivesdk", date: "2026-02-18" },
       { title: "Annual Examination Schedule 2024-25",         driveLink: "https://drive.google.com/file/d/REPLACE_WITH_REAL_FILE_ID/view",            date: "2025-02-10" },
       { title: "Admission Notice – Session 2025-26",          driveLink: "https://drive.google.com/file/d/REPLACE_WITH_REAL_FILE_ID/view",            date: "2025-01-28" },
       { title: "Mid-Day Meal Committee Meeting",              driveLink: "https://drive.google.com/file/d/REPLACE_WITH_REAL_FILE_ID/view",            date: "2025-01-15" },
@@ -316,4 +316,4 @@ function esc(str) {
 
 function isNew(dateStr) {
   return (Date.now() - new Date(dateStr)) / 86400000 <= 30;
-}
+        }
