@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notice Board | Naharkatia Primary School</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔔</text></svg>">
+  <link rel="stylesheet" href="../assets/css/shared.css">
+  <link rel="stylesheet" href="../assets/css/notices.css">
+</head>
+<body>
+
+<main>
+<div class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="page-hero__badge">📢 Official Announcements</div>
+    <h1 class="page-hero__title">Notice Board</h1>
+    <p class="page-hero__sub">Circulars, examination schedules, results and official school announcements</p>
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span>Notices</span></nav>
+  </div>
+</div>
+
+<section class="page-section">
+  <div class="container">
+    <div class="notices-layout">
+      <!-- Main Notices -->
+      <div class="notices-main">
+        <div class="notices-toolbar">
+          <div class="notices-toolbar__left">
+            <h2 class="notices-board-title">📋 All Notices</h2>
+            <span class="notices-count" id="noticeCount">Loading...</span>
+          </div>
+          <div class="notices-toolbar__right">
+            <div class="notices-search-wrap">
+              <input type="text" id="noticeSearch" class="notices-search" placeholder="🔍 Search notices...">
+            </div>
+          </div>
+        </div>
+
+        <div class="notices-board reveal">
+          <div class="notices-board__list" id="noticeList">
+            <!-- skeleton -->
+            ${[1,2,3,4,5].map(() => `
+              <div class="notice-item">
+                <div class="notice-item__icon skeleton" style="width:42px;height:42px;border-radius:8px;"></div>
+                <div class="notice-item__body">
+                  <div class="skeleton" style="height:13px;width:75%;margin-bottom:7px;"></div>
+                  <div class="skeleton" style="height:10px;width:35%;"></div>
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="notices-sidebar">
+        <div class="sidebar-card reveal">
+          <h4 class="sidebar-card__title">📅 School Timings</h4>
+          <ul class="sidebar-list">
+            <li><span>Mon – Fri</span><strong>9:00 AM – 3:30 PM</strong></li>
+            <li><span>Saturday</span><strong>9:00 AM – 1:00 PM</strong></li>
+            <li><span>Lunch</span><strong>12:00 – 12:30 PM</strong></li>
+            <li><span>Summer Vac.</span><strong>June 1 – 15</strong></li>
+            <li><span>Holidays</span><strong>As per Govt. Calendar</strong></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card reveal">
+          <h4 class="sidebar-card__title">📌 Admission Info</h4>
+          <ul class="sidebar-list">
+            <li><span>Age (Class I)</span><strong>5–6 years</strong></li>
+            <li><span>Documents</span><strong>Birth Cert, Aadhaar</strong></li>
+            <li><span>Session</span><strong>April – March</strong></li>
+            <li><span>Fees</span><strong>Nil (Govt. School)</strong></li>
+            <li><span>Uniform</span><strong>Govt. Scheme</strong></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card reveal">
+          <h4 class="sidebar-card__title">🔗 Quick Links</h4>
+          <div class="sidebar-quicklinks">
+            <a href="results.html">📊 View Results</a>
+            <a href="academics.html">📚 Academics</a>
+            <a href="contact.html">📞 Contact School</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<script src="../config.js"></script>
+<script src="../components.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  Components.init("Notice Board");
+  loadNotices();
+});
+
+let allNotices = [];
+
+function loadNotices() {
+  const list = document.getElementById("noticeList");
+  allNotices = [];
+
+  if (SCHOOL_CONFIG.notices.source === "hosted") {
+    allNotices = SCHOOL_CONFIG.notices.hostedFiles.map(n => ({
+      title: n.title, date: n.date,
+      viewUrl: n.file, downloadUrl: n.file,
+      isNew: isNew(n.date), source: "hosted"
+    }));
+  }
+
+  allNotices.sort((a, b) => new Date(b.date) - new Date(a.date));
+  renderNotices(allNotices);
+
+  document.getElementById("noticeSearch").addEventListener("input", e => {
+    const q = e.target.value.toLowerCase();
+    renderNotices(allNotices.filter(n => n.title.toLowerCase().includes(q)));
+  });
+}
+
+function renderNotices(list) {
+  const el = document.getElementById("noticeList");
+  const count = document.getElementById("noticeCount");
+  count.textContent = `${list.length} notice${list.length !== 1 ? "s" : ""}`;
+
+  if (!list.length) {
+    el.innerHTML = `<div style="padding:3rem;text-align:center;color:var(--c-muted)">No notices found.</div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(n => `
+    <div class="notice-item">
+      <div class="notice-item__icon">📄</div>
+      <div class="notice-item__body">
+        <div class="notice-item__title">
+          ${esc(n.title)}
+          ${n.isNew ? `<span class="badge-new">New</span>` : ""}
+        </div>
+        <div class="notice-item__date">📅 ${fmtDate(n.date)}</div>
+      </div>
+      <div class="notice-item__btns">
+        ${n.viewUrl
+          ? `<button class="n-btn n-btn--view" onclick="openPdfModal('${esc(n.title)}','${n.viewUrl}','${n.downloadUrl}')" title="Preview">👁️</button>`
+          : `<button class="n-btn n-btn--view" style="opacity:.35;cursor:not-allowed" disabled>👁️</button>`}
+        ${n.downloadUrl
+          ? `<a href="${n.downloadUrl}" download class="n-btn n-btn--dl" title="Download">⬇️</a>`
+          : `<button class="n-btn n-btn--dl" style="opacity:.35;cursor:not-allowed" disabled>⬇️</button>`}
+      </div>
+    </div>
+  `).join("");
+}
+</script>
+</body>
+</html>
