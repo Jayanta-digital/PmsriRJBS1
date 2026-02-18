@@ -15,7 +15,7 @@ const DriveLoader = (() => {
    * Returns array of file metadata objects
    */
   async function fetchFolderContents(folderId, apiKey) {
-    if (!folderId || folderId === "YOUR_MAIN_FOLDER_ID_HERE") return [];
+    if (!folderId || folderId === "1hCPcOexl5XzLhPTn5W5bwB-l3zHD5qli") return [];
 
     const cacheKey = `folder_${folderId}`;
     if (cache.has(cacheKey)) return cache.get(cacheKey);
