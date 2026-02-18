@@ -82,11 +82,11 @@ const SCHOOL_CONFIG = {
         caption: "Welcome to PM Shri Radhakuchi J.B. School"
       },
       {
-        driveLink: "https://drive.google.com/file/d/PASTE_YOUR_SLIDE2_FILE_ID_HERE/view",
+        driveLink: "https://drive.google.com/file/d/1Q43KzhqkxUwbP0BNZH7Zz4I9mDouqaE8/view",
         caption: "Excellence in Education Since 1948"
       },
       {
-        driveLink: "https://drive.google.com/file/d/PASTE_YOUR_SLIDE3_FILE_ID_HERE/view",
+        driveLink: "https://drive.google.com/file/d/1ZgSVXCSD82stANGzVfWx1NxVDRQXWeU4/view",
         caption: "Building Tomorrow's Leaders"
       },
     ],
