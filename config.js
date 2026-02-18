@@ -57,7 +57,7 @@ const SCHOOL_CONFIG = {
     hostedPath: "assets/images/school-logo.png",
 
     // If drive: paste the Google Drive shareable file link
-    driveLink:"https://drive.google.com/file/d/1qZgL9GzErfQfKgnrePbUC8Txrils9muZ/view?usp=drivesdk",
+    driveLink:"https://drive.google.com/file/d/1qZgL9GzErfQfKgnrePbUC8Txrils9muZ/view",
   //  driveLink: "https://drive.google.com/file/d/1qZgL9GzErfQfKgnrePbUC8Txrils9muZ/view",
 
     // Fallback text logo if image not found
