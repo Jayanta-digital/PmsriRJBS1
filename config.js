@@ -177,17 +177,20 @@ const SCHOOL_CONFIG = {
 
   // ─── TEACHERS ────────────────────────────────────────────────
   teachers: [
-    { name: "Boloram Baruah",  designation: "Headmaster",       qualification: "M.A. (Education), B.Ed.", subject: "General Administration",  experience: "18 Years", photoSource: "avatar", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/1OGoltG1Lpo4tRDb56WGZZGzRMuv3CCOI/view" },
-    { name: "Rupam Gogoi",     designation: "Senior Teacher",   qualification: "B.A., B.Ed.",             subject: "Assamese & Social Studies", experience: "12 Years", photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
-    { name: "Mousumi Das",     designation: "Teacher",          qualification: "B.Sc., B.Ed.",            subject: "Mathematics & Science",    experience: "8 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
-    { name: "Bijit Kalita",    designation: "Teacher",          qualification: "B.A., D.El.Ed.",          subject: "English & Arts",           experience: "6 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
-    { name: "Rekha Saikia",    designation: "Teacher",          qualification: "B.A., D.El.Ed.",          subject: "EVS & Drawing",            experience: "4 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
+    { name: "Boloram Baruah",  designation: "Headmaster",       qualification: "HSLC", subject: "General Administration",  experience: "18 Years", photoSource: "avatar", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/1OGoltG1Lpo4tRDb56WGZZGzRMuv3CCOI/view" },
+    { name: "Champak Nath",     designation: "Asstt. Teacher",   qualification: "B.A.",             subject: "All", experience: "12 Years", photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
+    { name: "Charulata Deka",     designation: "Asstt. Teacher",          qualification: "HSLC",            subject: "All",    experience: "19 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
+    { name: "Iramoni Deka",    designation: "Asstt. Teacher",          qualification: "B.A., B.Ed.",          subject: "All",           experience: "6 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
+    { name: "Bhanita Baruah",    designation: "Asstt. Teacher",          qualification: "M.A.",          subject: "All",            experience: "4 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
+    { name: "Doli Talukdar",    designation: "Asstt. Teacher",          qualification: "M.A., M.Ed.",          subject: "All",            experience: "4 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
   ],
 
   supportingStaff: [
-    { name: "Rina Nath",    designation: "Peon-cum-Chowkidar", photoSource: "avatar" },
-    { name: "Dipak Saikia", designation: "MDM Cook",           photoSource: "avatar" },
-    { name: "Mira Baruah",  designation: "Sweeper",            photoSource: "avatar" },
+    { name: "Dipu Kumar Nath",    designation: "Chess Teacher(Temp.)", photoSource: "avatar" },
+    { name: "Kankan Deka",    designation: "Music Teacher(Temp.)", photoSource: "avatar" },
+    { name: "Bikash Brahma",    designation: "P.E & Sports Teacher(Temp.)", photoSource: "avatar" },
+    { name: "Doiboki Kalita", designation: "Cook",           photoSource: "avatar" },
+    { name: "Bobita Deka",  designation: "Cook",            photoSource: "avatar" },
   ],
 
   // ─── STATS ───────────────────────────────────────────────────
