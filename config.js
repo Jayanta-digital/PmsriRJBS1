@@ -177,7 +177,7 @@ const SCHOOL_CONFIG = {
 
   // ─── TEACHERS ────────────────────────────────────────────────
   teachers: [
-    { name: "Boloram Baruah",  designation: "Headmaster",       qualification: "M.A. (Education), B.Ed.", subject: "General Administration",  experience: "18 Years", photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
+    { name: "Boloram Baruah",  designation: "Headmaster",       qualification: "M.A. (Education), B.Ed.", subject: "General Administration",  experience: "18 Years", photoSource: "avatar", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/1OGoltG1Lpo4tRDb56WGZZGzRMuv3CCOI/view" },
     { name: "Rupam Gogoi",     designation: "Senior Teacher",   qualification: "B.A., B.Ed.",             subject: "Assamese & Social Studies", experience: "12 Years", photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
     { name: "Mousumi Das",     designation: "Teacher",          qualification: "B.Sc., B.Ed.",            subject: "Mathematics & Science",    experience: "8 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
     { name: "Bijit Kalita",    designation: "Teacher",          qualification: "B.A., D.El.Ed.",          subject: "English & Arts",           experience: "6 Years",  photoSource: "avatar", photoPath: "", drivePhotoLink: "" },
