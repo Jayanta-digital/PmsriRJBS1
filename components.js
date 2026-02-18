@@ -17,6 +17,7 @@ const Components = (() => {
       { label: "Principal's Message", href: "pages/about.html#principal" },
     ]},
     { label: "🔔 Notices",    href: "pages/notices.html",   id: "notices" },
+    { label: "📝 Admission",  href: "pages/admission.html", id: "admission" },
     { label: "📚 Academics",  href: "pages/academics.html", id: "academics", children: [
       { label: "Class Routine",  href: "pages/academics.html#routine" },
       { label: "Syllabus",       href: "pages/academics.html#syllabus" },
