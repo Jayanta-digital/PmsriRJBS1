@@ -50,8 +50,8 @@ const SCHOOL_CONFIG = {
 
   // ─── LOGO ───────────────────────────────────────────────────
   logo: {
-    // "drive" or "hosted"
-    source: "hosted",
+    // source: "drive" or "hosted"
+    source: "drive",
 
     // If hosted: path relative to root
     hostedPath: "assets/images/school-logo.png",
@@ -68,7 +68,7 @@ const SCHOOL_CONFIG = {
 
   // ─── HERO SLIDER IMAGES ──────────────────────────────────────
   heroImages: {
-    source: "hosted", // "drive" | "hosted" | "both"
+    source: "drive", // "drive" | "hosted" | "both"
 
     hosted: [
       // Place images in assets/images/hero/ and list them here
@@ -90,7 +90,7 @@ const SCHOOL_CONFIG = {
 
   // ─── NOTICE BOARD ───────────────────────────────────────────
   notices: {
-    source: "hosted", // "drive" | "hosted"
+    source: "drive", // "drive" | "hosted"
 
     // If hosted: place PDFs in assets/pdfs/notices/ and list here
     hostedFiles: [
@@ -108,7 +108,7 @@ const SCHOOL_CONFIG = {
 
   // ─── GALLERY ────────────────────────────────────────────────
   gallery: {
-    source: "hosted", // "drive" | "hosted"
+    source: "drive", // "drive" | "hosted"
 
     hosted: [
       { path: "assets/images/gallery/sports-day.jpg",      caption: "Annual Sports Day 2024" },
