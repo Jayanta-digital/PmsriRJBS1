@@ -108,8 +108,8 @@ With warm regards,`,
   // ║     • After 30 days badge disappears on its own         ║
   // ╚══════════════════════════════════════════════════════════╝
   notices: {
-    //source: "drive",
-    source: "driveFiles",
+    source: "drive",
+    //source: "driveFiles",
    // noticeFolderUrl: "https://drive.google.com/drive/folders/197N380ywXB3FLF7EaON9bHiZner7e6uW",
     driveFiles: [
       // ↓↓ ADD NEW NOTICES AT THE TOP ↓↓
