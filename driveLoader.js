@@ -119,7 +119,7 @@ const DriveLoader = (() => {
    * Load school logo - from Drive or fallback
    */
   async function loadSchoolLogo(fileId) {
-    if (!fileId || fileId === "YOUR_LOGO_FILE_ID") {
+    if (!fileId || fileId === "1qZgL9GzErfQfKgnrePbUC8Txrils9muZ") {
       return null; // Will use text logo
     }
     // Test if image loads
