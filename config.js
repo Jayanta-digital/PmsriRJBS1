@@ -43,8 +43,9 @@ const SCHOOL_CONFIG = {
     email:    "naharkatialps@assamedu.gov.in",
     website:  "naharkatialps.assam.gov.in",
   },
+  mapEmbedUrl: "https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Radhakuchi LP School &amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
 
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57898.0!2d95.339!3d27.293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3744d0b1a6e8cde5%3A0x6f11f9dae8d56c97!2sNaharkatia%2C%20Assam!5e0!3m2!1sen!2sin!4v1234567890",
+  //mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57898.0!2d95.339!3d27.293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3744d0b1a6e8cde5%3A0x6f11f9dae8d56c97!2sNaharkatia%2C%20Assam!5e0!3m2!1sen!2sin!4v1234567890",
 
   // ─── LOGO ───────────────────────────────────────────────────
   logo: {
