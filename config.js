@@ -220,7 +220,7 @@ const SCHOOL_CONFIG = {
   stats: [
     { label: "Total Students",      value: 312, suffix: "+", icon: "👨‍🎓" },
     { label: "Pass Percentage",     value: 100, suffix: "%", icon: "📊" },
-    { label: "Teaching Staff",      value: 6,   suffix: "",  icon: "👩‍🏫" },
+    { label: "Teaching Staff",      value: 6,   suffix: "+",  icon: "👩‍🏫" },
     { label: "Years of Excellence", value: 78,  suffix: "+", icon: "🏅" },
   ],
 
