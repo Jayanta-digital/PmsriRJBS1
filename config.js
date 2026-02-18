@@ -67,6 +67,29 @@ const SCHOOL_CONFIG = {
     phone2:   "+91 03751 XXXXXX",
     email:    "radhakuchijbs@gmail.com",
     website:  "Coming soon...",
+
+// ─── HEADMASTER ─────────────────────────────────────────────
+headmaster: {
+  name:        "Mr. [Headmaster's Full Name]",       // ← fill in
+  designation: "Headmaster",
+  qualification: "M.A., B.Ed.",                      // ← fill in
+  experience:  "25+ Years",                          // ← fill in
+  photoSource: "drive",                              // "drive" or "hosted"
+  drivePhotoLink: "https://drive.google.com/file/d/PASTE_HEADMASTER_PHOTO_ID_HERE/view",
+  hostedPath:  "assets/images/headmaster.jpg",
+  message: `Dear Students, Parents & Well-wishers,
+
+It is with immense pride and joy that I welcome you to the official website of PM Shri 66no Radhakuchi J.B. School. For over seven decades, this institution has stood as a beacon of knowledge, values, and inclusive education in the heart of Kamrup.
+
+Our school is not merely a place of learning — it is a second home where every child is nurtured with care, curiosity, and character. Under the guidance of the Government of Assam and Samagra Shiksha Abhiyan, we strive every day to deliver quality foundational education aligned with the vision of NEP 2020.
+
+I sincerely thank our dedicated teachers, supportive parents, and the entire school community for making our journey remarkable. Together, we shall continue to light the lamp of education for every child.
+
+With warm regards,`
+},
+
+
+    
   },
 
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.4341516920206!2d91.51992632346046!3d26.35147917072626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sRadhakuchi%20LP%20School!2sRadhakuchi%2C%20Kamrup%20District%2C%20Assam!5e0!3m2!1sen!2sin!4v1707033600000",
