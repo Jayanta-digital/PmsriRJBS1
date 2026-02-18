@@ -262,15 +262,16 @@ let allNotices = [];
 function driveToPreview(link) {
   if (!link) return null;
   const m = link.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+  // Use /preview — renders inside iframe without Google account selector
   if (m) return `https://drive.google.com/file/d/${m[1]}/preview`;
-  // If it's a folder link, open it directly
   if (link.includes('/folders/')) return link;
   return link;
 }
 function driveToDownload(link) {
   if (!link) return null;
   const m = link.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
-  if (m) return `https://drive.google.com/uc?export=download&id=${m[1]}`;
+  // confirm=1 forces direct download without account picker prompt
+  if (m) return `https://drive.google.com/uc?export=download&confirm=1&id=${m[1]}`;
   return link;
 }
 
