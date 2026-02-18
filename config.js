@@ -155,12 +155,12 @@ const SCHOOL_CONFIG = {
 
     // ✅ PASTE YOUR GALLERY IMAGE DRIVE LINKS HERE:
     driveFiles: [
-      { driveLink: "https://drive.google.com/file/d/PASTE_GALLERY_IMAGE_1_ID/view", caption: "Annual Sports Day 2024" },
-      { driveLink: "https://drive.google.com/file/d/PASTE_GALLERY_IMAGE_2_ID/view", caption: "Science Exhibition" },
-      { driveLink: "https://drive.google.com/file/d/PASTE_GALLERY_IMAGE_3_ID/view", caption: "Cultural Programme" },
-      { driveLink: "https://drive.google.com/file/d/PASTE_GALLERY_IMAGE_4_ID/view", caption: "Smart Classroom Session" },
-      { driveLink: "https://drive.google.com/file/d/PASTE_GALLERY_IMAGE_5_ID/view", caption: "Independence Day 2024" },
-      { driveLink: "https://drive.google.com/file/d/PASTE_GALLERY_IMAGE_6_ID/view", caption: "Bihu Celebration" },
+      { driveLink: "https://drive.google.com/file/d/1hZxrkJx6IHE94kHEFrPRAmfaJtngccXL/view", caption: "Frontend" },
+      { driveLink: "https://drive.google.com/file/d/1llg2aoW2LoKmI3mM1oOY0yI_nNI7FSGI/view", caption: "Digital Class Room" },
+      { driveLink: "https://drive.google.com/file/d/1a3mB5GF_FRVRhcKOktPelQM2O7DUMOkb/view", caption: "musical Instrument" },
+      { driveLink: "https://drive.google.com/file/d/19wU_yApMdk3yDQGXFkh7f1rn_udsWHCQ/view", caption: "Newspaper Corner" },
+      { driveLink: "https://drive.google.com/file/d/134ePXCs40lOlrLAW-QVYUDiBbSsfWno1/view", caption: "Office Room" },
+      { driveLink: "https://drive.google.com/file/d/1w7ne9EgW15Lpe9V67WxNpACABqAX-ieI/view", caption: "Class Room" },
     ],
 
     hosted: [
