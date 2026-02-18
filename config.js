@@ -200,12 +200,12 @@ const SCHOOL_CONFIG = {
 
   // ─── TEACHERS ────────────────────────────────────────────────
   teachers: [
-    { name: "Boloram Baruah",  designation: "Headmaster",       qualification: "HSLC", subject: "General Administration",  experience: "18 Years", photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
-    { name: "Champak Nath",     designation: "Asstt. Teacher",   qualification: "B.A.",             subject: "All", experience: "12 Years", photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
-    { name: "Charulata Deka",     designation: "Asstt. Teacher",          qualification: "HSLC",            subject: "All",    experience: "19 Years",  photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
-    { name: "Iramoni Deka",    designation: "Asstt. Teacher",          qualification: "B.A., B.Ed.",          subject: "All",           experience: "6 Years",  photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
-    { name: "Bhanita Baruah",    designation: "Asstt. Teacher",          qualification: "M.A.",          subject: "All",            experience: "4 Years",  photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
-    { name: "Doli Talukdar",    designation: "Asstt. Teacher",          qualification: "M.A., M.Ed.",          subject: "All",            experience: "4 Years",  photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/PASTE_PHOTO_ID_HERE/view" },
+    { name: "Boloram Baruah",  designation: "Headmaster",       qualification: "HSLC", subject: "General Administration",  experience: "18 Years", photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/1OGoltG1Lpo4tRDb56WGZZGzRMuv3CCOI/view" },
+    { name: "Champak Nath",     designation: "Asstt. Teacher",   qualification: "B.A.",             subject: "All", experience: "12 Years", photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/1mb__YEKJJWvd0KWYFlyJdxxBwkqR2iSv/view" },
+    { name: "Charulata Deka",     designation: "Asstt. Teacher",          qualification: "HSLC",            subject: "All",    experience: "19 Years",  photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/1Tkf62r1ymoZzliYjua884-Mf3mpPVUYL/view" },
+    { name: "Iramoni Deka",    designation: "Asstt. Teacher",          qualification: "B.A., B.Ed.",          subject: "All",           experience: "6 Years",  photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/1PXjHGASCPezF1rdvkaUpfPuH6tYdHXMA/view" },
+    { name: "Bhanita Baruah",    designation: "Asstt. Teacher",          qualification: "M.A.",          subject: "All",            experience: "4 Years",  photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/1_DU22FZRTIyV_JgjYbv_pIwq-TT1PTTv/view" },
+    { name: "Doli Talukdar",    designation: "Asstt. Teacher",          qualification: "M.A., M.Ed.",          subject: "All",            experience: "4 Years",  photoSource: "drive", photoPath: "", drivePhotoLink: "https://drive.google.com/file/d/1Z6ZPWX_OLZU59QWqgwl3hOQ2kfGqMIaJ/view" },
   ],
 
   supportingStaff: [
