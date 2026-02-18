@@ -48,7 +48,7 @@
 const SCHOOL_CONFIG = {
 
   // ─── SCHOOL IDENTITY ────────────────────────────────────────
-  name:          "PM Shri Radhakuchi J.B. School",
+  name:          "PM Shri B Radhakuchi J.B. School",
   nameAssamese:  "৬৬ নং বি ৰাধাকুছি নিম্ন বুনিয়াদী বিদ্যালয়",
   shortName:     "RJBS",
   code:          "18060605101",
