@@ -17,7 +17,6 @@ const Components = (() => {
       { label: "Principal's Message", href: "pages/about.html#principal" },
     ]},
     { label: "🔔 Notices",    href: "pages/notices.html",   id: "notices" },
-    { label: "📝 Admission",  href: "pages/admission.html", id: "admission" },
     { label: "📚 Academics",  href: "pages/academics.html", id: "academics", children: [
       { label: "Class Routine",  href: "pages/academics.html#routine" },
       { label: "Syllabus",       href: "pages/academics.html#syllabus" },
@@ -53,7 +52,7 @@ const Components = (() => {
   // ── INJECT TOP BAR ───────────────────────────────────────────
   function injectTopBar() {
     const base = getBase();
-    const notices = SCHOOL_CONFIG.notices.hostedFiles.slice(0, 5);
+    const notices = (SCHOOL_CONFIG.notices.driveFiles || SCHOOL_CONFIG.notices.hostedFiles || []).slice(0, 5);
     const marqueeText = notices.map(n => `📌 ${n.title}  ·  ${fmtDate(n.date)}`).join("     |||     ");
 
     const el = document.createElement("div");
@@ -370,4 +369,4 @@ function closePdfModal() {
   modal.classList.remove("open");
   document.getElementById("pdfModalFrame").src = "about:blank";
   document.body.style.overflow = "";
-}
+  }
