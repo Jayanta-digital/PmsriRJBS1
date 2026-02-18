@@ -23,21 +23,21 @@
 const SCHOOL_CONFIG = {
 
   // ─── SCHOOL IDENTITY ────────────────────────────────────────
-  name:          "Naharkatia Primary School",
-  nameAssamese:  "নহৰকটীয়া প্ৰাথমিক বিদ্যালয়",
+  name:          "PM Shri Radhakuchi J.B. School",
+  nameAssamese:  "৬৬ নং ৰাধকুছি প্ৰাথমিক বিদ্যালয়",
   shortName:     "NPS",
   code:          "AS-DHM-1042",
-  established:   1952,
+  established:   1948,
   tagline:       "শিক্ষাই মানৱ জীৱনৰ মূল আধাৰ",
   taglineEn:     "Education is the Foundation of Human Life",
   affiliation:   "DEE Assam / Samagra Shiksha Abhiyan",
-  district:      "Dibrugarh",
+  district:      "Kamrup",
   state:         "Assam",
   type:          "Government Lower Primary School",
 
   // ─── CONTACT ────────────────────────────────────────────────
   contact: {
-    address:  "Naharkatia Town, Dibrugarh District, Assam – 786610",
+    address:  "Radhakuchi, Kamrup District, Assam – 781381",
     phone:    "+91 94350 XXXXX",
     phone2:   "+91 03751 XXXXXX",
     email:    "naharkatialps@assamedu.gov.in",
@@ -58,7 +58,7 @@ const SCHOOL_CONFIG = {
     driveLink: "https://drive.google.com/file/d/YOUR_LOGO_FILE_ID/view",
 
     // Fallback text logo if image not found
-    textFallback: "NPS",
+    textFallback: "RJBS",
   },
 
   // Assam Govt Seal — always auto-fetched from CDN
@@ -159,7 +159,7 @@ const SCHOOL_CONFIG = {
   // ─── TEACHERS ────────────────────────────────────────────────
   teachers: [
     {
-      name:        "Priyanka Borah",
+      name:        "Boloram Baruah",
       designation: "Headmistress",
       qualification: "M.A. (Education), B.Ed.",
       subject:     "General Administration",
