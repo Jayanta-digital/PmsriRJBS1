@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   buildStats();
   buildHero();
   buildHomeNotices();
+  buildHeadmasterDesk();
 });
 
 /* ── Stats ── */
@@ -98,6 +99,39 @@ function goSlide(n) {
 function startHeroTimer() {
   heroTimer = setInterval(() => goSlide(heroIdx + 1), 5000);
 }
+
+/* ── Headmaster Desk ── */
+function buildHeadmasterDesk() {
+  const hm = SCHOOL_CONFIG.headmaster;
+  if (!hm) return;
+
+  // Photo
+  let photoUrl = "https://ui-avatars.com/api/?background=1a5276&color=fff&size=300&bold=true&name=" + encodeURIComponent(hm.name);
+  if (hm.photoSource === "drive" && !isDrivePlaceholder(hm.drivePhotoLink)) {
+    photoUrl = driveShareToImageUrl(hm.drivePhotoLink);
+  } else if (hm.photoSource === "hosted" && hm.hostedPath) {
+    photoUrl = hm.hostedPath;
+  }
+  const imgEl = document.getElementById("hmPhoto");
+  if (imgEl) imgEl.src = photoUrl;
+
+  // Text fields
+  const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val || ""; };
+  set("hmName", hm.name);
+  set("hmDesig", hm.designation);
+  set("hmQual", hm.qualification + (hm.experience ? " · " + hm.experience : ""));
+  set("hmSigName", hm.name);
+
+  // Message — preserve line breaks
+  const msgEl = document.getElementById("hmMessage");
+  if (msgEl && hm.message) {
+    msgEl.innerHTML = hm.message
+      .trim()
+      .split(/\n\n+/)
+      .map(p => `<p>${esc(p.trim()).replace(/\n/g, "<br>")}</p>`)
+      .join("");
+  }
+               }
 
 /* ── Home Notices Preview ── */
 function buildHomeNotices() {
