@@ -78,7 +78,7 @@ const SCHOOL_CONFIG = {
     ],
 
     // Google Drive: Paste shareable FOLDER link
-    driveFolderLink: "https://drive.google.com/drive/folders/YOUR_HERO_FOLDER_ID",
+    driveFolderLink: "https://drive.google.com/drive/folders/1qhy59YDxSiCvXrlZdNOhnkbcbTdxKoNC",
 
     // Fallback images from Unsplash CDN if no local/drive images
     fallback: [
