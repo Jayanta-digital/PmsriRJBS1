@@ -42,7 +42,7 @@ const SCHOOL_CONFIG = {
   headmaster: {
     name:          "Boloram Baruah",
     designation:   "Headmaster",
-    qualification: "HSLC",
+   // qualification: "HSLC",
     experience:    "18+ Years",
     photoSource:   "drive",   // "drive" or "hosted"
     drivePhotoLink: "https://drive.google.com/file/d/1LY6HyfdZajx_HYGLTZs_IQQUAfUkPzLH/view",
