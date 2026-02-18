@@ -17,6 +17,7 @@ const Components = (() => {
       { label: "Principal's Message", href: "pages/about.html#principal" },
     ]},
     { label: "🔔 Notices",    href: "pages/notices.html",   id: "notices" },
+    { label: "📝 Admission",  href: "pages/admission.html", id: "admission" },
     { label: "📚 Academics",  href: "pages/academics.html", id: "academics", children: [
       { label: "Class Routine",  href: "pages/academics.html#routine" },
       { label: "Syllabus",       href: "pages/academics.html#syllabus" },
@@ -65,6 +66,7 @@ const Components = (() => {
         <div class="top-bar__links">
           <a href="https://dee.assam.gov.in" target="_blank" rel="noopener">🔗 DEE Assam</a>
           <a href="https://samagrashikshaassam.in" target="_blank" rel="noopener">🔗 SSA Assam</a>
+          <a href="${base}pages/admission.html">📝 Admission</a>
           <a href="${base}pages/notices.html">🔔 Notices</a>
         </div>
       </div>
@@ -107,6 +109,7 @@ const Components = (() => {
           </div>
         </div>
         <div class="header__actions">
+          <a href="${base}pages/admission.html" class="btn-hdr btn-hdr--fill">📝 Admission</a>
           <a href="${base}pages/notices.html" class="btn-hdr btn-hdr--fill">🔔 Notices</a>
           <a href="${base}pages/contact.html" class="btn-hdr btn-hdr--outline">📞 Contact</a>
         </div>
