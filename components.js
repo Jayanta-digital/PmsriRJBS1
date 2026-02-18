@@ -276,7 +276,7 @@ const Components = (() => {
           </div>
         </div>
         <div class="pdf-modal__body">
-          <iframe id="pdfModalFrame" title="PDF Preview" src="about:blank" allowfullscreen></iframe>
+          <iframe id="pdfModalFrame" title="PDF Preview" src="about:blank" allowfullscreen allow="autoplay" sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-top-navigation"></iframe>
         </div>
       </div>
     `;
@@ -369,4 +369,4 @@ function closePdfModal() {
   modal.classList.remove("open");
   document.getElementById("pdfModalFrame").src = "about:blank";
   document.body.style.overflow = "";
-  }
+}
