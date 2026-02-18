@@ -26,7 +26,7 @@ const SCHOOL_CONFIG = {
   name:          "PM Shri Radhakuchi J.B. School",
   nameAssamese:  "৬৬ নং ৰাধকুছি প্ৰাথমিক বিদ্যালয়",
   shortName:     "NPS",
-  code:          "AS-DHM-1042",
+  code:          "18060605101",
   established:   1948,
   tagline:       "শিক্ষাই মানৱ জীৱনৰ মূল আধাৰ",
   taglineEn:     "Education is the Foundation of Human Life",
@@ -40,22 +40,13 @@ const SCHOOL_CONFIG = {
     address:  "Radhakuchi, Kamrup District, Assam – 781381",
     phone:    "+91 94350 XXXXX",
     phone2:   "+91 03751 XXXXXX",
-    email:    "naharkatialps@assamedu.gov.in",
-    website:  "naharkatialps.assam.gov.in",
+    email:    "radhakuchijbs@gmail.com",
+    website:  "comming soon....",
   },
   
-  <div class="mapouter">
-  <div class="gmap_canvas">
-  <iframe 
-  class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Radhakuchi LP School &amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-  </iframe>
-  <a href="https://embed-googlemap.com">embed google maps in website
-  </a>
-  </div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}
-  </style>
-  </div>
+  
 
-  //mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57898.0!2d95.339!3d27.293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3744d0b1a6e8cde5%3A0x6f11f9dae8d56c97!2sNaharkatia%2C%20Assam!5e0!3m2!1sen!2sin!4v1234567890",
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57898.0!2d95.339!3d27.293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3744d0b1a6e8cde5%3A0x6f11f9dae8d56c97!2sNaharkatia%2C%20Assam!5e0!3m2!1sen!2sin!4v1234567890",
 
   // ─── LOGO ───────────────────────────────────────────────────
   logo: {
