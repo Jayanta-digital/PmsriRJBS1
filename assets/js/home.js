@@ -138,15 +138,41 @@ function buildHomeNotices() {
   const list = document.getElementById("homeNoticeList");
   if (!list) return;
 
+  const cfg = SCHOOL_CONFIG.notices;
   let notices = [];
-  if (SCHOOL_CONFIG.notices.source === "hosted") {
-    notices = SCHOOL_CONFIG.notices.hostedFiles.map(n => ({
-      title: n.title, date: n.date,
-      viewUrl: n.file, downloadUrl: n.file,
-      isNew: isNew(n.date)
+
+  if (cfg.source === "drive" && cfg.driveFiles && cfg.driveFiles.length) {
+    // Real Drive links — convert to embed/download URLs
+    const real = cfg.driveFiles
+      .filter(n => n.title && !isDrivePlaceholder(n.driveLink))
+      .map(n => ({
+        title:       n.title,
+        date:        n.date,
+        viewUrl:     driveShareToEmbed(n.driveLink),
+        downloadUrl: driveShareToDownload(n.driveLink),
+        isNew:       isNew(n.date)
+      }));
+    // Placeholder links — show title/date but disable buttons
+    const placeholder = cfg.driveFiles
+      .filter(n => n.title && isDrivePlaceholder(n.driveLink))
+      .map(n => ({
+        title: n.title, date: n.date,
+        viewUrl: null, downloadUrl: null,
+        isNew: isNew(n.date)
+      }));
+    notices = [...real, ...placeholder];
+
+  } else if (cfg.source === "hosted" && cfg.hostedFiles && cfg.hostedFiles.length) {
+    notices = cfg.hostedFiles.map(n => ({
+      title:       n.title,
+      date:        n.date,
+      viewUrl:     n.file,
+      downloadUrl: n.file,
+      isNew:       isNew(n.date)
     }));
   }
-  // Sort newest first, show 5
+
+  // Sort newest first, show top 5
   notices.sort((a, b) => new Date(b.date) - new Date(a.date));
   notices = notices.slice(0, 5);
 
