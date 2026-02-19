@@ -41,8 +41,8 @@ const SCHOOL_CONFIG = {
   // ✅ This is correctly OUTSIDE contact, at the top level of SCHOOL_CONFIG
   headmaster: {
     name:          "Boloram Baruah",
-    designation:   "Headmaster🖋️",
-    qualification: "HSLC",
+    designation:   "Headmaster",
+    qualification: "HSLC ",
     experience:    "18+ Years",
     photoSource:   "drive",   // "drive" or "hosted"
     drivePhotoLink: "https://drive.google.com/file/d/1LY6HyfdZajx_HYGLTZs_IQQUAfUkPzLH/view",
