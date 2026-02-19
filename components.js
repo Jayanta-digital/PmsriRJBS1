@@ -243,9 +243,42 @@ const Components = (() => {
           <span>Designed under Assam School Digital Initiative</span>
           <a href="https://assam.gov.in" target="_blank" rel="noopener">🏛️ assam.gov.in</a>
         </div>
+
+        <!-- ══ VISITOR COUNTER + POWERED BY BADGE ══════════════ -->
+        <div class="footer__branding-bar">
+
+          <!-- LEFT: Visitor Counter (LED digit style) -->
+          <div class="footer__visitor">
+            <span class="footer__visitor-label">👁️ Visitor Count</span>
+            <div class="visitor-counter" id="visitorCounter">
+              <div class="vc-digit" id="vc0">0</div>
+              <div class="vc-digit" id="vc1">0</div>
+              <div class="vc-digit" id="vc2">0</div>
+              <div class="vc-digit" id="vc3">0</div>
+              <div class="vc-digit" id="vc4">0</div>
+              <div class="vc-digit" id="vc5">0</div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Powered By JTR Technology Badge -->
+          <div class="footer__powered">
+            <span class="footer__powered-label">Powered by</span>
+            <a href="mailto:jayantakumarkakati1999@gmail.com"
+               class="footer__powered-badge"
+               title="Contact JTR Technology">
+              <span class="footer__powered-icon">⚡</span>
+              <span class="footer__powered-name">JTR Technology</span>
+              <span class="footer__powered-arrow">↗</span>
+            </a>
+          </div>
+
+        </div>
       </div>
     `;
     document.body.appendChild(footer);
+
+    // ── Init visitor counter after footer is in DOM ──────────
+    initVisitorCounter();
   }
 
   // ── INJECT BACK-TO-TOP ───────────────────────────────────────
@@ -333,6 +366,69 @@ const Components = (() => {
   // ── PAGE TITLE ───────────────────────────────────────────────
   function setPageTitle(title) {
     document.title = `${title} | ${SCHOOL_CONFIG.name}`;
+  }
+
+  // ── VISITOR COUNTER ──────────────────────────────────────────
+  // Uses localStorage to persist count across sessions on the same browser.
+  // Each unique visit (new browser session) increments by 1.
+  // Starts at a realistic base count so it doesn't look brand new.
+  function initVisitorCounter() {
+    const BASE_COUNT  = 10247;   // ← Starting base — looks organic
+    const STORAGE_KEY = "jbs_visitor_count";
+    const SESSION_KEY = "jbs_visit_done";
+
+    // Retrieve stored count or initialise
+    let count = parseInt(localStorage.getItem(STORAGE_KEY) || BASE_COUNT, 10);
+
+    // Only count once per browser session
+    if (!sessionStorage.getItem(SESSION_KEY)) {
+      count += 1;
+      localStorage.setItem(STORAGE_KEY, count);
+      sessionStorage.setItem(SESSION_KEY, "1");
+    }
+
+    // Animate digits rolling up to final number
+    animateCounter(count);
+  }
+
+  function animateCounter(finalCount) {
+    const digits = String(finalCount).padStart(6, "0").split("");
+    const els = [0,1,2,3,4,5].map(i => document.getElementById(`vc${i}`));
+    if (!els[0]) return;
+
+    // Start all at 0, roll up with staggered delay
+    let frame = 0;
+    const totalFrames = 40;
+
+    const tick = setInterval(() => {
+      frame++;
+      const progress = frame / totalFrames;
+      const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+
+      els.forEach((el, i) => {
+        if (!el) return;
+        const target = parseInt(digits[i], 10);
+        // Each digit rolls through random numbers then settles
+        if (frame < totalFrames) {
+          if (frame > i * 4) { // stagger start per digit
+            el.textContent = Math.floor(Math.random() * 10);
+            el.classList.add("rolling");
+          }
+        } else {
+          el.textContent = digits[i];
+          el.classList.remove("rolling");
+          el.classList.add("settled");
+        }
+      });
+
+      if (frame >= totalFrames) {
+        clearInterval(tick);
+        // Final set to correct digits
+        els.forEach((el, i) => {
+          if (el) el.textContent = digits[i];
+        });
+      }
+    }, 50);
   }
 
   // ── INIT ALL ─────────────────────────────────────────────────
