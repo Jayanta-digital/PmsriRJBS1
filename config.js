@@ -194,7 +194,7 @@ With warm regards,`,
 
   // ─── GOVT LINKS ──────────────────────────────────────────────
   govLinks: [
-    { name: "Samagra Shiksha Assam", url: "https://www.samagrashikshaassam.in/" },
+    { name: "Samagra Shiksha Assam (SSA)", url: "https://ssa.assam.gov.in/" },
     { name: "DEE Assam",             url: "https://dee.assam.gov.in/" },
     { name: "SEBA",                  url: "https://sebaonline.org/" },
     { name: "Education Dept. Assam", url: "https://education.assam.gov.in/" },
