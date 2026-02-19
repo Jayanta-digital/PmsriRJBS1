@@ -420,3 +420,218 @@ textarea{resize:vertical}
   60%{transform:translateX(-4px)}
   80%{transform:translateX(4px)}
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER BRANDING BAR — Visitor Counter + JTR Technology Badge
+   Very bottom of footer on every page
+═══════════════════════════════════════════════════════════════ */
+.footer__branding-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0 1.2rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+  margin-top: .2rem;
+}
+
+/* ── Visitor Counter (left side) ── */
+.footer__visitor {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.footer__visitor-label {
+  font-size: .7rem;
+  color: rgba(255,255,255,.45);
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* LED-style counter frame */
+.visitor-counter {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: #0a0a0a;
+  border: 2px solid #00bcd4;
+  border-radius: 8px;
+  padding: 6px 12px;
+  box-shadow:
+    0 0 10px rgba(0,188,212,.35),
+    0 0 24px rgba(0,188,212,.15),
+    inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+/* Individual digit — LED glow style */
+.vc-digit {
+  width: 22px;
+  height: 32px;
+  background: #0d0d0d;
+  color: #ff3b30;
+  font-family: 'Courier New', 'Lucida Console', monospace;
+  font-size: 1.2rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  text-shadow:
+    0 0 6px #ff3b30,
+    0 0 12px #ff3b30,
+    0 0 20px rgba(255,59,48,.5);
+  border: 1px solid rgba(255,59,48,.2);
+  transition: color .08s;
+  letter-spacing: 0;
+  line-height: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Scanline effect inside each digit */
+.vc-digit::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,.15) 2px,
+    rgba(0,0,0,.15) 4px
+  );
+  pointer-events: none;
+}
+
+/* Rolling animation */
+.vc-digit.rolling {
+  color: rgba(255, 59, 48, .6);
+  text-shadow: 0 0 4px rgba(255,59,48,.4);
+}
+
+/* Settled — bright glow */
+.vc-digit.settled {
+  animation: ledPulse .6s ease-out;
+}
+
+@keyframes ledPulse {
+  0%   { text-shadow: 0 0 16px #ff3b30, 0 0 32px #ff3b30, 0 0 48px rgba(255,59,48,.8); }
+  100% { text-shadow: 0 0 6px #ff3b30, 0 0 12px #ff3b30, 0 0 20px rgba(255,59,48,.5); }
+}
+
+/* Separator dots between digit groups */
+.visitor-counter .vc-sep {
+  color: rgba(255,59,48,.4);
+  font-size: .75rem;
+  margin: 0 1px;
+  font-weight: 900;
+}
+
+/* ── Powered By JTR Technology Badge (right side) ── */
+.footer__powered {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  flex-shrink: 0;
+}
+
+.footer__powered-label {
+  font-size: .7rem;
+  color: rgba(255,255,255,.38);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.footer__powered-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: 6px 16px 6px 12px;
+  background: linear-gradient(135deg, rgba(232,93,4,.18) 0%, rgba(249,115,22,.12) 100%);
+  border: 1.5px solid rgba(232,93,4,.45);
+  border-radius: 999px;
+  color: rgba(255,255,255,.88);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-decoration: none;
+  transition: all .25s ease;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Shimmer sweep on hover */
+.footer__powered-badge::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -80%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
+  transition: left .5s ease;
+}
+.footer__powered-badge:hover::before {
+  left: 130%;
+}
+
+.footer__powered-badge:hover {
+  background: linear-gradient(135deg, rgba(232,93,4,.4) 0%, rgba(249,115,22,.32) 100%);
+  border-color: var(--c-accent-l);
+  color: #fff;
+  box-shadow: 0 0 18px rgba(232,93,4,.3), 0 3px 12px rgba(0,0,0,.3);
+  transform: translateY(-1px);
+}
+
+.footer__powered-icon {
+  font-size: .95rem;
+  filter: drop-shadow(0 0 4px rgba(249,115,22,.6));
+}
+
+.footer__powered-name {
+  background: linear-gradient(90deg, #f97316, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .03em;
+}
+
+.footer__powered-badge:hover .footer__powered-name {
+  background: linear-gradient(90deg, #fb923c, #fcd34d);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.footer__powered-arrow {
+  font-size: .7rem;
+  color: rgba(255,255,255,.5);
+  transition: transform .2s ease, color .2s;
+}
+.footer__powered-badge:hover .footer__powered-arrow {
+  transform: translate(2px,-2px);
+  color: rgba(255,255,255,.85);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .footer__branding-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .85rem;
+  }
+  .footer__powered {
+    align-self: flex-end;
+  }
+  .vc-digit {
+    width: 19px;
+    height: 27px;
+    font-size: 1rem;
+  }
+}
